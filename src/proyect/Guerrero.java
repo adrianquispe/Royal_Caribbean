@@ -14,4 +14,9 @@ public class Guerrero extends Pirata{
 	public int poderDeMando() {
 		return poderDePelea * vitalidad;
 	}
+	
+	@Override
+	public void vencido() {
+		poderDePelea = poderDePelea / 2;
+	}
 }

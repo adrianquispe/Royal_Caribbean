@@ -31,4 +31,9 @@ class Cocinero extends Pirata{
 	public void agregarItem(String item) {
 		ingredientes.add(item);
 	}
+	
+	@Override
+	public void vencido() {
+		moral = moral/2;
+	}
 }

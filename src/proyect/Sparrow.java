@@ -17,13 +17,13 @@ public class Sparrow extends Pirata{
 	public int poderDeMando() {
 		return energia * poderDePelea * inteligencia;
 	}
-	public void tomarRonCon(Cocinero unCocinero) {
+	public void tomarRonCon(Pirata unPirata) {
 		this.aumentarEnergiaEn(100);
-		unCocinero.bajarEnergiaEn(50);
-		this.robarIngredienteA(unCocinero);
+		unPirata.tomarRonCon(this);
+		this.robarIngredienteA(unPirata);
 	}
-	public void robarIngredienteA(Cocinero unCocinero) {
-		String itemRobado = unCocinero.perderItem();
+	public void robarIngredienteA(Pirata unPirata) {
+		String itemRobado = unPirata.perderItem();
 		this.agregarItem(itemRobado);
 	}
 	public void agregarItem(String item) {

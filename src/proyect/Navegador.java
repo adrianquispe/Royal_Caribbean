@@ -10,6 +10,11 @@ public class Navegador extends Pirata{
 	}
 	
 	public int poderDeMando() {
-		return inteligencia ^ 2;
+		return inteligencia * inteligencia;
+	}
+	
+	@Override
+	public void vencido() {
+		inteligencia = inteligencia /2;
 	}
 }
